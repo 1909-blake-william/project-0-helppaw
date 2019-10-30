@@ -1,0 +1,20 @@
+2019-10-30 01:19:56 DEBUG BankUserDaoSQL:30 - attempting to find user by credentials from DB
+2019-10-30 01:20:58 DEBUG BankUserDaoSQL:87 - attempting to find user by credentials from DB
+2019-10-30 01:22:48 DEBUG BankUserDaoSQL:30 - attempting to find user by credentials from DB
+2019-10-30 01:23:51 DEBUG BankUserDaoSQL:30 - attempting to find user by credentials from DB
+2019-10-30 01:26:53 DEBUG BankUserDaoSQL:30 - attempting to find user by credentials from DB
+2019-10-30 01:28:08 DEBUG BankUserDaoSQL:30 - attempting to find user by credentials from DB
+2019-10-30 01:29:48 DEBUG BankUserDaoSQL:30 - attempting to find user by credentials from DB
+2019-10-30 01:30:14 DEBUG BankUserDaoSQL:87 - attempting to find user by credentials from DB
+2019-10-30 01:33:35 DEBUG BankUserDaoSQL:87 - attempting to find user by credentials from DB
+2019-10-30 10:19:39 DEBUG BankUserDaoSQL:30 - attempting to find user by credentials from DB
+2019-10-30 10:25:49 DEBUG BankUserDaoSQL:30 - attempting to find user by credentials from DB
+2019-10-30 10:26:29 DEBUG BankUserDaoSQL:87 - attempting to find user by credentials from DB
+2019-10-30 15:58:41 DEBUG BankUserDaoSQL:87 - attempting to find user by credentials from DB
+2019-10-30 15:59:44 DEBUG AdminMainMenuPrompt:36 - You have successfully logged out.
+2019-10-30 16:01:16 DEBUG BankUserDaoSQL:87 - attempting to find user by credentials from DB
+2019-10-30 16:01:21 DEBUG AdminMainMenuPrompt:37 - successfully logged out.
+2019-10-30 16:23:00 DEBUG BankUserDaoSQL:87 - attempting to find user by credentials from DB
+2019-10-30 16:26:28 DEBUG BankUserDaoSQL:87 - attempting to find user by credentials from DB
+2019-10-30 16:26:30 INFO  BankLoginPrompt:37 - you successfully logged in
+2019-10-30 16:26:40 DEBUG AdminMainMenuPrompt:41 - successfully logged out.
