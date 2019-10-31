@@ -1,0 +1,23 @@
+package com.revature.bankprompts;
+
+import org.apache.log4j.Logger;
+
+import com.revature.bankdaos.BankAccountDao;
+import com.revature.bankutil.BankAuthUtil;
+
+public class WithdrawPrompt implements BankPrompt {
+	
+	private Logger log = Logger.getRootLogger();
+	private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
+	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
+	private TransactionDao transactionDao = TransactionDao.currentImplementation;
+	
+	
+
+	@Override
+	public BankPrompt run() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

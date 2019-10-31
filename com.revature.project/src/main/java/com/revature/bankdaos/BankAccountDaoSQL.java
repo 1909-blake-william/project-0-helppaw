@@ -68,10 +68,30 @@ public class BankAccountDaoSQL implements BankAccountDao {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		} else { //make a selection
+			bankLog.debug("attempting to find all of your bank accounts");
+			try (Connection c = BankConnectionUtility.getConnection()) {
+
+				String sql = "SELECT * FROM bankaccounts WHERE user_id = '?'";
+
+				PreparedStatement ps = c.prepareStatement(sql);
+				ps.setInt(userId, userId);
+
+				ResultSet rs = ps.executeQuery();
+				
+				List<BankAccount> bA = new ArrayList<BankAccount>();
+				while (rs.next()) {
+					bA.add(extractBankAccount(rs));
+				}
+				return bA;
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}	
 		}
 		return null;
 	}
-
+		
 	@Override
 	public BankAccount findByBankAccountId(int bankAccountId) {
 		bankLog.debug("attempting to find bank account by credentials from DB");

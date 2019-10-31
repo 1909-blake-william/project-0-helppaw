@@ -58,3 +58,21 @@
 2019-10-31 03:23:12 DEBUG BankUserDaoSQL:87 - attempting to find user by credentials from DB
 2019-10-31 03:23:14 INFO  BankLoginPrompt:37 - you successfully logged in
 2019-10-31 03:23:19 DEBUG BankAccountDaoSQL:54 - attempting to find all bank accounts from DB
+2019-10-31 12:11:17 DEBUG BankUserDaoSQL:87 - attempting to find user by credentials from DB
+2019-10-31 12:11:18 INFO  BankLoginPrompt:37 - you successfully logged in
+2019-10-31 12:11:56 DEBUG BankAccountDaoSQL:54 - attempting to find all bank accounts from DB
+2019-10-31 12:30:34 DEBUG BankUserDaoSQL:87 - attempting to find user by credentials from DB
+2019-10-31 12:30:36 INFO  BankLoginPrompt:37 - you successfully logged in
+2019-10-31 12:30:49 DEBUG WithdrawPrompt:31 - attempting to withdraw from account
+2019-10-31 12:30:49 DEBUG BankAccountDaoSQL:54 - attempting to find all bank accounts from DB
+2019-10-31 12:41:46 DEBUG BankUserDaoSQL:87 - attempting to find user by credentials from DB
+2019-10-31 12:41:48 INFO  BankLoginPrompt:37 - you successfully logged in
+2019-10-31 12:41:55 DEBUG WithdrawPrompt:29 - attempting to withdraw from account
+2019-10-31 12:41:55 DEBUG BankAccountDaoSQL:54 - attempting to find all bank accounts from DB
+2019-10-31 12:46:36 DEBUG BankUserDaoSQL:87 - attempting to find user by credentials from DB
+2019-10-31 12:46:38 INFO  BankLoginPrompt:37 - you successfully logged in
+2019-10-31 12:46:47 DEBUG DepositPrompt:30 - attempting to deposit into your account
+2019-10-31 12:46:47 DEBUG BankAccountDaoSQL:54 - attempting to find all bank accounts from DB
+2019-10-31 12:47:17 DEBUG DepositPrompt:30 - attempting to deposit into your account
+2019-10-31 12:47:17 DEBUG BankAccountDaoSQL:54 - attempting to find all bank accounts from DB
+2019-10-31 12:47:39 DEBUG AdminMainMenuPrompt:41 - successfully logged out.

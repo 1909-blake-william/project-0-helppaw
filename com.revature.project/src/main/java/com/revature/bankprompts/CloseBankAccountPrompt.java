@@ -43,6 +43,8 @@ public class CloseBankAccountPrompt implements BankPrompt {
 			System.out.print("You just closed your account");
 
 			ps.executeUpdate();
+			
+			return new AdminMainMenuPrompt();
 
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -1,0 +1,78 @@
+package com.revature.bankprompts;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import com.revature.bankmodels.BankAccount;
+import com.revature.bankutil.BankAuthUtil;
+import com.revature.bankutil.BankConnectionUtility;
+
+public class TransactionDaoSQL implements TransactionDao {
+	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
+	
+	private Logger bankLog = Logger.getRootLogger();
+	
+
+	Transactions extractTransactions(ResultSet rs) throws SQLException {
+		int rsTransactionId = rs.getInt("transaction_id");
+		int rsBankAccountId = rs.getInt("bank_account_id");
+		int rsUserId = rs.getInt("user_id");
+		double rsAmount = rs.getDouble("amount");
+		String rsAction = rs.getString("action");
+		return new Transactions(rsTransactionId, rsBankAccountId, rsUserId, rsAmount, rsAction);
+	}
+	
+	
+
+	@Override
+	public int save(Transactions transaction) {
+		// bankLog.debug("attempting to find accounts from DB");
+				try (Connection c = BankConnectionUtility.getConnection()) {
+
+					String sql = "INSERT INTO transactions (transaction_id, bank_account_id, user_id, user_id) "
+							+ " VALUES (bankaccounts_id_seq.nextval , ?,?,?)";
+
+					PreparedStatement ps = c.prepareStatement(sql);
+					ps.setInt(1, bA.getBankAccountId());
+					ps.setDouble(2, bA.getBalance());
+					ps.setInt(3, bA.getBankAccountTypeId());
+					return ps.executeUpdate();
+
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+				return 0;
+			}
+
+	@Override
+	public List<Transactions> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Transactions findById(int transactionId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Transactions> findByAccountId(int accountId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Transactions> findByUserId(int userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
