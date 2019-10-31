@@ -1,0 +1,20 @@
+package com.revature.bankdaos;
+
+public class BankDataBaseDaoImplementation implements BankDataBaseDao {
+
+	
+	
+
+	@Override
+	public boolean checkUsernameAndPassword(String username, String password) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean checkUsername(String username) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

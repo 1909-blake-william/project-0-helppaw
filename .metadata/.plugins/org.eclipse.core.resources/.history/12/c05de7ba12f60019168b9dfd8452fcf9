@@ -1,0 +1,9 @@
+package com.revature.bankdaos;
+
+public interface BankDataBaseDao {
+
+	//boolean check username and password
+	boolean checkUsername();
+	
+	boolean checkUsernameAndPassword();
+}

@@ -1,0 +1,51 @@
+package com.revature.bankdaos;
+
+import java.sql.ResultSet;
+import java.util.List;
+import com.revature.bankmodels.User;
+
+public class UserDaoSQL implements CustomerDao {
+
+	private Logger bankLog = Logger.getRootLogger();
+	
+	User extractUser(ResultSet rs) throws SQLException {
+		int id = rs.getInt("user_id");
+		String rsUsername = rs.getString("username");
+		int rsPinnumber = rs.getInt("pinnumber");
+		String role = rs.getString("role");
+		return new User(id, rsUsername, rsPinnumber, role);
+	}
+	
+	
+	
+	@Override
+	public int save(User c) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<User> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User findById() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User findByUsernameAndPinnumber(String username, int pinnumber) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

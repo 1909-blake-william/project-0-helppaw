@@ -22,7 +22,7 @@ public class CustomerMainMenuPrompt implements BankPrompt {
 		case "1":
 			return new ViewBankAccountPrompt();
 		case "2":
-			return new AddOrRemoveBankAccountPrompt();
+			return new CreateOrCloseBankAccountPrompt();
 		case "3":
 			return new DepositOrWithdraw();
 		default:
@@ -33,3 +33,4 @@ public class CustomerMainMenuPrompt implements BankPrompt {
 	}
 
 }
+

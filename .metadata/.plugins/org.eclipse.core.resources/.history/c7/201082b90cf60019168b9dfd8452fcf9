@@ -1,0 +1,26 @@
+package com.revature.bankUtil;
+
+import com.revature.bankdaos.UserDao;
+import com.revature.bankmodels.User;
+
+public class BankAuthUtil {
+
+	public static final BankAuthUtil instance = new BankAuthUtil();
+	
+	private UserDao userDao = UserDao.myCurrentImplementation;
+	private User currentCustomer = null;
+	
+	private BankAuthUtil() {
+		super();
+	}
+
+	public User login(String username, int pinNumber) {
+		User c = userDao.findByUsernameAndPinNumber(username, pinNumber);
+		currentCustomer = c;
+		return c;
+	}
+
+	public User getCurrentCustomer() {
+		return currentCustomer;
+	}
+}

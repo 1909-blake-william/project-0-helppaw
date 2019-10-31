@@ -1,0 +1,53 @@
+package com.revature.bankdaos;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+import com.revature
+import com.revature.bankmodels.BankAccount;
+
+import org.apache.log4j.Logger;
+
+public class BankAccountDaoSQL implements BankAccountDao {
+	
+	private Logger bankLog = Logger.getRootLogger();
+	
+	BankAccount extractBankAccount(ResultSet rs) throws SQLException {
+		int bankAccountId = rs.getInt("bankaccount_id");
+		double balance = rs.getDouble("balance");
+		int bankAccountTypeId = rs.getInt("bankaccount_type_id");
+		int userId = rs.getInt("user_id");
+				return BankAccount(bankAccountId, balance, bankAccountTypeId, userId);
+	}
+
+	@Override
+	public int save(BankAccount bA) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<BankAccount> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BankAccount findByBankAccountId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BankAccount findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BankAccount findByFullname(String fullname) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

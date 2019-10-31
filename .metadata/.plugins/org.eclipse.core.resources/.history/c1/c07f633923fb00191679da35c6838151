@@ -1,0 +1,38 @@
+package com.MainMenuprompt;
+
+import java.util.Scanner;
+
+import com.revature.bankprompts.BankPrompt;
+
+public class CustomerMainMenuPrompt implements BankPrompt {
+
+	private Scanner scan = new Scanner(System.in);
+	// private BankAuthUtil authUtil = BankAuthUtil.instance;
+
+	@Override
+	public BankPrompt run() {
+
+		// System.out.println("Welcome " + authUtil.getCurrentCustomer() + ", please
+		// choose an option");
+		System.out.println("Enter 1 to view pokemon");
+		System.out.println("Enter 2 to create pokemon");
+		System.out.println("Enter 3 to free pokemon");
+
+		// get user input
+		String selection = scan.nextLine();
+
+		switch (selection) {
+		case "1":
+			// return new ViewPokemonPrompt();
+		case "2":
+			// return new CreatePokemonPrompt();
+		case "3":
+			// return new FreePokemonPrompt();
+		default:
+			System.out.println("invalid selection, try again.");
+			break;
+		}
+		return this;
+	}
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.revature.bankprompts.BankPrompt"/>
+<fullyQualifiedTypeName name="com.revature.bankmodels.Customer"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="com.revature.bankdaos.UserDao"/>
+<fullyQualifiedTypeName name="com.revature.bankUtil.BankConnectionUtility"/>
+<fullyQualifiedTypeName name="com.revature.bankUtil.BankAuthUtil"/>
+<fullyQualifiedTypeName name="com.revature.bankdaos.BankUserDaoSQL"/>
+<fullyQualifiedTypeName name="com.revature.prompts.ViewPokemonPrompt"/>
+<fullyQualifiedTypeName name="com.revature.bankmodels.BankUser"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.revature.bankutil.BankConnectionUtility"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.revature.bankdaos.BankAccountDaoSQL"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="com.revature.bankdaos.BankAccountDao"/>
+<fullyQualifiedTypeName name="com.revature.bankutil.BankAuthUtil"/>
+<fullyQualifiedTypeName name="com.revature.bankdaos.BankUserDao"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,12 @@
+1571795453175	Move compilation unit
+1571883856652	Rename method 'extractCustomer'
+1571883894540	Rename type 'Customer'
+1571883927094	Rename type 'CustomerDaoSQL'
+1571883965115	Rename type 'CustomerDao'
+1571884015744	Rename field 'custoerDao'
+1571887012392	Rename local variable 'pinNumber'
+1571887055032	Rename field 'currentCustomer'
+1571887114485	Rename field 'currentUser'
+1571887169027	Rename type 'UserDao'
+1571887532955	Rename method 'findByUsernameAndPinnumber'
+1571887542828	Rename local variable 'pinnumber'

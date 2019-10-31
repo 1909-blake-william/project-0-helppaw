@@ -1,0 +1,71 @@
+package com.revature.bankdaos;
+
+import java.awt.List;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Logger;
+
+import com.revature.bankmodels.BankUser;
+import com.revature.bankutil.BankConnectionUtility;
+
+public class BankUserDaoSQL implements BankUserDao {
+
+	private Logger bankLog = Logger.getAnonymousLogger();
+
+	BankUser extractBankUser(ResultSet rs) throws SQLException {
+		int id = rs.getInt("user_id");
+		String rsUsername = rs.getString("username");
+		String rsPassword = rs.getString("password");
+		String role = rs.getString("role");
+		String rsFullName = rs.getString("FullName");
+		return new BankUser(id, rsUsername, rsPassword, role, rsFullName);
+	}
+
+	@Override
+	public int save(BankUser bU) {
+			log.debug("attempting to find user by credentials from DB");
+			try (Connection c = BankConnectionUtility.getConnection()) {
+
+				String sql = "INSERT INTO pokemon_users (user_id, username, password) "
+						+ " VALUES (pokemon_users_id_seq.nextval ,?,?)";
+
+				PreparedStatement ps = c.prepareStatement(sql);
+				ps.setString(1, u.getUsername());
+				ps.setString(2, u.getPassword());
+
+				return ps.executeUpdate();
+
+
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+//				e.printStackTrace();
+				return 0;
+			}
+
+	@Override
+	public List<BankUser> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BankUser findById() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BankUser findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BankUser findByUsernameAndPassword(String username, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

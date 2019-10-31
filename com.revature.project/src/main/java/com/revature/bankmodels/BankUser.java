@@ -1,8 +1,7 @@
 package com.revature.bankmodels;
 
-import java.io.Serializable;
 
-public class BankUser implements Serializable {
+public class BankUser {
 	private int userId;
 	private String username;
 	private String password;

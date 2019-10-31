@@ -1,0 +1,37 @@
+package com.revature.bankprompts;
+
+import java.util.Scanner;
+
+import com.revature.bankUtil.BankAuthUtil;
+import com.revature.bankmodels.BankUser;
+
+
+
+
+public class BankLoginPrompt implements BankPrompt {
+	//private Logger log = Logger.getRootLogger();
+	private Scanner scan = new Scanner(System.in);
+	//private UserDao userDao = UserDao.currentImplementation;
+	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
+
+	@Override
+	public ViewAccountPrompt run() {
+		System.out.println("Enter 1 to login");
+		System.out.println("Enter 2 to register");
+		String choice = scan.nextLine();
+		switch (choice) {
+		case "1": {
+			//log.debug(attempting to login");}
+			System.out.println("Enter username:");
+			String username = scan.nextLine();
+			System.out.println("Enter password");
+			String password = scan.nextLine();
+			
+			BankUser bU = bankAuthUtil.login(username, password);
+		}
+		
+	}
+		return null;
+
+	}
+}

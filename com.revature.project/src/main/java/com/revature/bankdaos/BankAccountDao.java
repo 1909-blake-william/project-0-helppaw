@@ -10,14 +10,16 @@ public interface BankAccountDao {
 	
 	int save(BankAccount bA);
 	
-	List<BankAccount> findAll();
+	List<BankAccount> findAll(int userId, String role);
 	
 	BankAccount findByBankAccountId(int bankAccountId);
 	
-	BankAccount findByUsername(String username);
+	BankAccount findByUsername(String username);//make it a list for multiple accounts w/ same user
 	
 	BankAccount findByFullname(String fullname);
 	
+	//withdraw (BankAccount double)
+	//deposit	(BankAccount double)
 	
 }
 //cascading deletes on the foreign key (string?)

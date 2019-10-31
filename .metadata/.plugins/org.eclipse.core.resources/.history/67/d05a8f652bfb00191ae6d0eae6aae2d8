@@ -1,0 +1,10 @@
+ackage com.revature.bankprompts;
+
+public class MakeWithdrawalPrompt implements Prompt {
+
+	public Prompt run() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

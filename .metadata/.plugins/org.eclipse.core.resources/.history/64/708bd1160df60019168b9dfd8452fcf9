@@ -1,0 +1,21 @@
+package com.revature.bankdaos;
+
+import java.util.List;
+
+import com.revature.bankmodels.User;		
+
+public interface UserDao {
+	
+	UserDao currentImplementation = new UserDaoSQL();
+	
+	int save(User c);
+	
+	List<User> findAll();
+	
+	User findById();
+	
+	User findByUsernameAndPinnumber(String username, int pinnumber);
+	
+	User findByUsername(String username);
+
+}

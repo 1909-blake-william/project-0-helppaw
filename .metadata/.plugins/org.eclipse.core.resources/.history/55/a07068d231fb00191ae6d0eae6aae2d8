@@ -1,0 +1,14 @@
+package com.revature.bankdaos;
+
+public class BankAccount {
+	private int bankAccountId;
+	private double balance;
+	private int bankAccountTypeId;
+	private int 
+	
+
+	public BankAccount() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

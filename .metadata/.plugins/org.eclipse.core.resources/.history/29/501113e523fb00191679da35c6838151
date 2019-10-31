@@ -1,0 +1,11 @@
+ackage com.revature.bankprompts;
+
+public class EmployeeMainMenuPrompt implements BankPrompt {
+
+	@Override
+	public ViewAccountPrompt run() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

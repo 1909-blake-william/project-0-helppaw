@@ -1,0 +1,20 @@
+package com.revature.bankprompts;
+
+import java.util.Scanner;
+
+import com.revature.bankdaos.BankAccountDao;
+
+
+public class AddOrRemoveBankAccountPrompt implements BankPrompt {
+
+	private Scanner scan = new Scanner(System.in);
+	private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
+	private 
+	
+	@Override
+	public BankPrompt run() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

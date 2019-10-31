@@ -49,9 +49,8 @@ public class BankAccountDaoSQL implements BankAccountDao {
 	}
 
 	@Override
-	public List<BankAccount> findAll() {
-		if ("Admin".equals(bankAuthUtil.getRole())) {
-
+	public List<BankAccount> findAll(int userId, String role) {
+		if ("Admin".equals(role)) {
 			bankLog.debug("attempting to find all bank accounts from DB");
 			try (Connection c = BankConnectionUtility.getConnection()) {
 

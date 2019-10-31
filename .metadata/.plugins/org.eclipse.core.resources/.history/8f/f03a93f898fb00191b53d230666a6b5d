@@ -1,0 +1,35 @@
+package com.revature.bankprompts;
+
+import java.util.Scanner;
+
+import com.revature.bankdaos.BankAccountDao;
+import com.revature.bankdaos.BankUserDao;
+import com.revature.bankutil.BankAuthUtil;
+
+
+public class CreateOrCloseBankAccountPrompt implements BankPrompt {
+
+	private Scanner scan = new Scanner(System.in);
+	private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
+	private BankUserDao bankUserDao = BankUserDao.currentImplementation;
+	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
+
+
+	@Override
+	public BankPrompt run() {
+		System.out.println("Enter 1 to create a bank account");
+		System.out.println("Enter 2 to close a bank account");
+		String choice = scan.nextLine();
+		switch (choice) {
+		case "1": {
+			System.out.println("Enter");
+			
+		}
+		}	
+		
+		return new AdminMainMenuPrompt();
+	}
+	}
+
+		
+	

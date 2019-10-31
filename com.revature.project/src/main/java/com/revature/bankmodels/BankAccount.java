@@ -1,6 +1,8 @@
 package com.revature.bankmodels;
 
 public class BankAccount {
+	public static BankAccount currentImplementation;
+
 	BankUser bU = new BankUser();
 	
 	private int bankAccountId;
