@@ -10,7 +10,7 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 import com.revature.bankdaos.BankAccountDao;
-import com.revature.bankdaos.TransactionDao;
+
 import com.revature.bankmodels.BankAccount;
 import com.revature.bankmodels.BankUser;
 import com.revature.bankutil.BankAuthUtil;
@@ -21,7 +21,6 @@ public class WithdrawPrompt implements BankPrompt {
 	private Logger log = Logger.getRootLogger();
 	private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
-	private TransactionDao transactionDao = TransactionDao.currentImplementation;
 	private Scanner scan = new Scanner(System.in);
 
 	@Override

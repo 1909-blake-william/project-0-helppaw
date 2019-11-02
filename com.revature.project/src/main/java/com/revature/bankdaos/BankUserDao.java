@@ -14,12 +14,13 @@ public interface BankUserDao {
 	
 	List<BankUser> findAll();
 	
-	BankUser findById();
 	
 	BankUser findByUsernameAndPassword(String username, String password);
 	
 	BankUser findByUsername(String username);
 	
 	BankUser findByFullname(String fullname);
+
+	BankUser findById(int userId);
 
 }

@@ -9,8 +9,10 @@ import org.apache.log4j.Logger;
 
 import com.revature.bankdaos.BankAccountDao;
 import com.revature.bankdaos.BankUserDao;
+import com.revature.bankdaos.TransactionsDao;
 import com.revature.bankmodels.BankAccount;
 import com.revature.bankmodels.BankUser;
+import com.revature.bankmodels.Transactions;
 import com.revature.bankutil.BankAuthUtil;
 import com.revature.bankutil.BankConnectionUtility;
 
@@ -21,6 +23,7 @@ public class CreateBankAccountPrompt implements BankPrompt {
 	private Scanner scan = new Scanner(System.in);
 	// private BankAccount bA = BankAccount.currentImplementation;
 	Logger bankLog = Logger.getRootLogger();
+	private TransactionsDao transactions = TransactionsDao.currentImplementation;
 
 	@Override
 	public BankPrompt run() {

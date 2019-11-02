@@ -71,11 +71,34 @@ public class BankUserDaoSQL implements BankUserDao {
 	}
 
 	@Override
-	public BankUser findById() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public BankUser findById(int userId){
+		//bankLog.debug("attempting to find all users from DB");
+		try (Connection c = BankConnectionUtility.getConnection()) {
 
+			String sql = "SELECT * FROM bank_users WHERE user_id = ?";
+
+			PreparedStatement ps = c.prepareStatement(sql);
+			ps.setInt(1, userId);
+
+			ResultSet rs = ps.executeQuery();
+			
+			BankUser bU = null;
+			if(rs.next()) {
+				bU = extractBankUser(rs);
+			}
+			
+			
+
+			return bU;
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	
 	@Override
 	public BankUser findByUsername(String username) {
 		// TODO Auto-generated method stub

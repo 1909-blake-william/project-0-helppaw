@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,7 @@ import com.revature.bankmodels.BankAccount;
 import com.revature.bankutil.BankAuthUtil;
 import com.revature.bankutil.BankConnectionUtility;
 
-public class TransactionDaoSQL implements TransactionDao {
+public class TransactionsDaoSQL implements TransactionsDao {
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
 	private BankUserDaoSQL bSQL = (BankUserDaoSQL) BankUserDaoSQL.currentImplementation;
 	
@@ -27,8 +28,9 @@ public class TransactionDaoSQL implements TransactionDao {
 		int rsUserId = rs.getInt("user_id");
 		double rsAmount = rs.getDouble("amount");
 		String rsAction = rs.getString("action");
-		String rsRole = rs.getString("role");
-		return new Transactions(rsTransactionId, rsBankAccountId, rsUserId, rsAmount, rsAction, rsRole);
+		Timestamp rsTimestamp = rs.getTimestamp("timestamp");
+		return new Transactions(rsTransactionId, rsBankAccountId, rsUserId, rsAction, rsAmount, rsTimestamp);
+		
 	}
 	
 	
@@ -46,7 +48,7 @@ public class TransactionDaoSQL implements TransactionDao {
 					ps.setInt(2, transaction.getUserId());
 					ps.setDouble(3, transaction.getAmount());
 					ps.setString(4,  transaction.getAction());
-					ps.setString(5, transaction.getRole());
+			
 					return ps.executeUpdate();
 
 				} catch (SQLException e) {

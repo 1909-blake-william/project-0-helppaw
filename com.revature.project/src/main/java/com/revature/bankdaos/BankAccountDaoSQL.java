@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
 
 public class BankAccountDaoSQL implements BankAccountDao {
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
+	
 
 	private Logger bankLog = Logger.getRootLogger();
 
@@ -50,7 +51,7 @@ public class BankAccountDaoSQL implements BankAccountDao {
 
 	@Override
 	public List<BankAccount> findAll(int userId, String role) {
-		if ("Admin".equals(role)) {
+		//if ("Admin".equals(role)) {
 			bankLog.debug("attempting to find all bank accounts from DB");
 			try (Connection c = BankConnectionUtility.getConnection()) {
 
@@ -68,14 +69,18 @@ public class BankAccountDaoSQL implements BankAccountDao {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		} else { //make a selection
+		//} else { //make a selection
 			bankLog.debug("attempting to find all of your bank accounts");
 			try (Connection c = BankConnectionUtility.getConnection()) {
 
 				String sql = "SELECT * FROM bankaccounts WHERE user_id = '?'";
 
+			/*	String sql = "SELECT * FROM bankaccounts a\r\n" + 
+						"INNER JOIN bank_users u\r\n" + 
+						"ON(a.user_id = u.user_id) WHERE user_id = '?'";
+				*/
 				PreparedStatement ps = c.prepareStatement(sql);
-				ps.setInt(userId, userId);
+				ps.setInt(1, userId);
 
 				ResultSet rs = ps.executeQuery();
 				
@@ -88,9 +93,11 @@ public class BankAccountDaoSQL implements BankAccountDao {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}	
-		}
+	//	}
 		return null;
+	
 	}
+//}
 		
 	@Override
 	public BankAccount findByBankAccountId(int bankAccountId) {
@@ -118,6 +125,7 @@ public class BankAccountDaoSQL implements BankAccountDao {
 		return null;
 	}
 
+
 	@Override
 	public BankAccount findByUsername(String username) {
 		// TODO Auto-generated method stub
@@ -130,4 +138,56 @@ public class BankAccountDaoSQL implements BankAccountDao {
 		return null;
 	}
 
+	@Override
+	public List<BankAccount> findCurrentUser(int userId) {
+		
+		//if ("Admin".equals(role)) {
+		bankLog.debug("attempting to find all bank accounts from DB");
+		try (Connection c = BankConnectionUtility.getConnection()) {
+
+			String sql = "SELECT * FROM bankaccounts WHERE user_id = ?";
+
+			PreparedStatement ps = c.prepareStatement(sql);
+
+			ps.setInt(1, userId);
+			
+			ResultSet rs = ps.executeQuery();
+			List<BankAccount> bA = new ArrayList<BankAccount>();
+			while (rs.next()) {
+				bA.add(extractBankAccount(rs));
+			}
+			return bA;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	//} else { //make a selection
+		bankLog.debug("attempting to find all of your bank accounts");
+		try (Connection c = BankConnectionUtility.getConnection()) {
+
+			String sql = "SELECT * FROM bankaccounts WHERE user_id = ?";
+
+			PreparedStatement ps = c.prepareStatement(sql);
+			ps.setInt(1, userId);
+
+			ResultSet rs = ps.executeQuery();
+			
+			List<BankAccount> bA = new ArrayList<BankAccount>();
+			while (rs.next()) {
+				bA.add(extractBankAccount(rs));
+			}
+			return bA;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+//	}
+	return null;
+
 }
+//}
+	}
+
+
+
+

@@ -22,7 +22,7 @@ public class CloseBankAccountPrompt implements BankPrompt {
 	@Override
 	public BankPrompt run() {
 		BankUser user = bU.getCurrentUser();
-		List<BankAccount> accounts = bankAccountDao.findAll(user.getUserId(), user.getRole());
+		List<BankAccount> accounts = bankAccountDao.findCurrentUser(user.getUserId());
 		System.out.println("Select the bank account you wish to close by account id");
 		for (int i = 0; i < accounts.size(); i++) {
 			if(accounts.get(i).getActiveStatus() == 1) {

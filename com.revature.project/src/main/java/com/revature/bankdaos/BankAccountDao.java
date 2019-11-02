@@ -12,6 +12,8 @@ public interface BankAccountDao {
 	
 	List<BankAccount> findAll(int userId, String role);
 	
+	List<BankAccount> findCurrentUser(int userId);
+	
 	BankAccount findByBankAccountId(int bankAccountId);
 	
 	BankAccount findByUsername(String username);//make it a list for multiple accounts w/ same user

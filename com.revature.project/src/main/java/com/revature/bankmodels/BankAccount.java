@@ -23,7 +23,8 @@ public class BankAccount {
 		this.bankAccountId = bankAccountId;
 		this.balance = balance;
 		this.bankAccountTypeId = bankAccountTypeId;
-		this.userId = bU.getUserId();
+	//	this.userId = bU.getUserId();
+		this.userId = userId;
 		this.activeStatus = activeStatus;
 	}
 

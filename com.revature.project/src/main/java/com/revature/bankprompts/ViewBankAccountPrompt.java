@@ -10,8 +10,8 @@
 	import org.apache.log4j.Logger;
 
 	import com.revature.bankdaos.BankAccountDao;
-	import com.revature.bankdaos.TransactionDao;
-	import com.revature.bankmodels.BankAccount;
+import com.revature.bankdaos.BankUserDao;
+import com.revature.bankmodels.BankAccount;
 	import com.revature.bankmodels.BankUser;
 	import com.revature.bankutil.BankAuthUtil;
 	import com.revature.bankutil.BankConnectionUtility;
@@ -21,7 +21,8 @@ public class ViewBankAccountPrompt implements BankPrompt {
 		private Logger log = Logger.getRootLogger();
 		private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
 		private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
-		private TransactionDao transactionDao = TransactionDao.currentImplementation;
+		private BankUserDao bankUserDao = BankUserDao.currentImplementation;
+		
 		private Scanner scan = new Scanner(System.in);
 
 		@Override
@@ -32,12 +33,18 @@ public class ViewBankAccountPrompt implements BankPrompt {
 			List<BankAccount> accounts = bankAccountDao.findAll(user.getUserId(), user.getRole());
 			
 			for (int i = 0; i < accounts.size(); i++) {
+				BankAccount thisAccount = accounts.get(i);
+				int userId = thisAccount.getUserId();
+				BankUser thisUser = bankUserDao.findById(userId);
+				String fullname = thisUser.getFullname();
 				
-				if (accounts.get(i).getActiveStatus() == 1) {
-					System.out.println("Enter " + i + "for: " + accounts.get(i).getBankAccountId() + " "
-							+ accounts.get(i).getBankAccountTypeId() + " " + accounts.get(i).getBalance());
+			//	bankUserDao.findById(accounts.get(i).getUserId()).getFullname();
+				
+				//if (accounts.get(i).getActiveStatus() == 1) {
+					System.out.println("Enter " + i + "for: " + fullname + accounts.get(i).getBankAccountId() + " "
+							+ accounts.get(i).getBankAccountTypeId() + " " + accounts.get(i).getBalance() + " " + accounts.get(i).getUserId());
 				}
-			}
+			//}
 			
 
 		

@@ -10,7 +10,7 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 import com.revature.bankdaos.BankAccountDao;
-import com.revature.bankdaos.TransactionDao;
+
 import com.revature.bankmodels.BankAccount;
 import com.revature.bankmodels.BankUser;
 import com.revature.bankutil.BankAuthUtil;
@@ -21,15 +21,16 @@ public class DepositPrompt implements BankPrompt {
 	private Logger log = Logger.getRootLogger();
 	private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
-	private TransactionDao transactionDao = TransactionDao.currentImplementation;
 	private Scanner scan = new Scanner(System.in);
+	
+	
 
 	@Override
 	public BankPrompt run() {
 		log.debug("attempting to deposit into your account");
 		BankUser user = bankAuthUtil.getCurrentUser();
 		// if(bankAuthUtil.getCurrentUser().getRole().contentEquals("Customer")) {
-		List<BankAccount> accounts = bankAccountDao.findAll(user.getUserId(), user.getRole());
+		List<BankAccount> accounts = bankAccountDao.findCurrentUser(user.getUserId());
 		System.out.println("Select the bank account you wish to deposit into. ");
 		for (int i = 0; i < accounts.size(); i++) {
 			if (accounts.get(i).getActiveStatus() == 1) {
@@ -51,13 +52,17 @@ public class DepositPrompt implements BankPrompt {
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, accounts.get(accountSelection).getBankAccountId());
 			ps.setInt(2, user.getUserId());
-
+			System.out.println(depositAmount);
+System.out.println(accounts.get(accountSelection).getBankAccountId());
+System.out.println(user.getUserId());
 			ResultSet rs = ps.executeQuery();
-			rs.next();
-			double balance = rs.getDouble("balance");
-
+			double balance = 0;
+			if(rs.next()) {
+			 balance = rs.getDouble("balance");
+			 
+			}
 			balance += depositAmount;
-
+System.out.println(balance);
 			if (depositAmount <= 0) {
 				System.out.println("You cannot deposit a negative value. Good day sir/ma'am.");
 				return new AdminMainMenuPrompt();
