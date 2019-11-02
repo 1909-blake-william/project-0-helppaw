@@ -9,10 +9,7 @@ public class Transactions {
 	private String action;
 	private double amount;
 	private Timestamp timestamp;
-	
-	
-	
-	
+
 	public Transactions(int transactionid, int bankAccountId, int userId, String action, double amount,
 			Timestamp timestamp) {
 		super();
@@ -23,51 +20,16 @@ public class Transactions {
 		this.amount = amount;
 		this.timestamp = timestamp;
 	}
+
 	public Transactions() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 	public int getTransactionid() {
 		return transactionid;
 	}
-	public void setTransactionid(int transactionid) {
-		this.transactionid = transactionid;
-	}
-	public int getBankAccountId() {
-		return bankAccountId;
-	}
-	public void setBankAccountId(int bankAccountId) {
-		this.bankAccountId = bankAccountId;
-	}
-	public int getUserId() {
-		return userId;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-	public String getAction() {
-		return action;
-	}
-	public void setAction(String action) {
-		this.action = action;
-	}
-	public double getAmount() {
-		return amount;
-	}
-	public void setAmount(double amount) {
-		this.amount = amount;
-	}
-	public Timestamp getTimestamp() {
-		return timestamp;
-	}
-	public void setTimestamp(Timestamp timestamp) {
-		this.timestamp = timestamp;
-	}
-	@Override
-	public String toString() {
-		return "Transactions [transactionid=" + transactionid + ", bankAccountId=" + bankAccountId + ", userId="
-				+ userId + ", action=" + action + ", amount=" + amount + ", timestamp=" + timestamp + "]";
-	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -82,6 +44,7 @@ public class Transactions {
 		result = prime * result + userId;
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -111,10 +74,54 @@ public class Transactions {
 			return false;
 		return true;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Transactions [transactionid=" + transactionid + ", bankAccountId=" + bankAccountId + ", userId="
+				+ userId + ", action=" + action + ", amount=" + amount + ", timestamp=" + timestamp + "]";
 	}
-	
-	
 
+	public void setTransactionid(int transactionid) {
+		this.transactionid = transactionid;
+	}
 
+	public int getBankAccountId() {
+		return bankAccountId;
+	}
 
+	public void setBankAccountId(int bankAccountId) {
+		this.bankAccountId = bankAccountId;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public String getAction() {
+		return action;
+	}
+
+	public void setAction(String action) {
+		this.action = action;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+	public Timestamp getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(Timestamp timestamp) {
+		this.timestamp = timestamp;
+	}
+}

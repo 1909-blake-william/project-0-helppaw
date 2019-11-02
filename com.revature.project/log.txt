@@ -489,3 +489,122 @@
 2019-11-01 23:54:17 DEBUG BankAccountDaoSQL:55 - attempting to find all bank accounts from DB
 2019-11-01 23:54:21 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
 2019-11-01 23:54:21 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:23:24 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-02 00:23:34 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-02 00:23:35 INFO  BankLoginPrompt:37 - you successfully logged in
+2019-11-02 00:23:35 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:23:35 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:23:38 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 00:23:38 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 00:23:42 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 00:23:42 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 00:23:42 DEBUG DepositPrompt:30 - attempting to deposit into your account
+2019-11-02 00:23:42 DEBUG BankAccountDaoSQL:145 - attempting to find all bank accounts from DB
+2019-11-02 00:23:57 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:23:57 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:24:17 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountPrompt
+2019-11-02 00:24:17 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountPrompt
+2019-11-02 00:24:17 DEBUG ViewBankAccountPrompt:30 - attempting to view all of your accounts
+2019-11-02 00:24:17 DEBUG BankAccountDaoSQL:55 - attempting to find all bank accounts from DB
+2019-11-02 00:24:21 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:24:21 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:55:15 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-02 00:55:21 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-02 00:55:23 INFO  BankLoginPrompt:37 - you successfully logged in
+2019-11-02 00:55:23 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:55:23 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:55:29 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 00:55:29 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 00:55:33 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 00:55:33 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 00:55:33 DEBUG DepositPrompt:30 - attempting to deposit into your account
+2019-11-02 00:55:33 DEBUG BankAccountDaoSQL:145 - attempting to find all bank accounts from DB
+2019-11-02 00:55:49 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:55:49 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:56:00 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 00:56:00 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 00:56:03 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 00:56:03 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 00:56:03 DEBUG DepositPrompt:30 - attempting to deposit into your account
+2019-11-02 00:56:03 DEBUG BankAccountDaoSQL:145 - attempting to find all bank accounts from DB
+2019-11-02 00:56:18 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:56:18 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:56:48 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountPrompt
+2019-11-02 00:56:48 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountPrompt
+2019-11-02 00:56:48 DEBUG ViewBankAccountPrompt:30 - attempting to view all of your accounts
+2019-11-02 00:56:48 DEBUG BankAccountDaoSQL:55 - attempting to find all bank accounts from DB
+2019-11-02 00:56:56 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 00:56:56 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:09:00 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-02 01:09:08 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-02 01:09:11 INFO  BankLoginPrompt:37 - you successfully logged in
+2019-11-02 01:09:11 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:09:11 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:09:23 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 01:09:23 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 01:09:25 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 01:09:25 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 01:09:25 DEBUG DepositPrompt:32 - attempting to deposit into your account
+2019-11-02 01:09:25 DEBUG BankAccountDaoSQL:145 - attempting to find all bank accounts from DB
+2019-11-02 01:09:39 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:09:39 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:10:29 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-02 01:10:35 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-02 01:10:38 INFO  BankLoginPrompt:37 - you successfully logged in
+2019-11-02 01:10:38 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:10:38 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:10:42 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 01:10:42 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 01:10:44 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 01:10:44 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 01:10:44 DEBUG DepositPrompt:32 - attempting to deposit into your account
+2019-11-02 01:10:44 DEBUG BankAccountDaoSQL:145 - attempting to find all bank accounts from DB
+2019-11-02 01:10:53 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:10:53 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:11:00 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-02 01:11:15 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-02 01:11:18 INFO  BankLoginPrompt:37 - you successfully logged in
+2019-11-02 01:11:18 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:11:18 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:11:20 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 01:11:20 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 01:11:20 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 01:11:20 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 01:11:20 DEBUG DepositPrompt:32 - attempting to deposit into your account
+2019-11-02 01:11:20 DEBUG BankAccountDaoSQL:145 - attempting to find all bank accounts from DB
+2019-11-02 01:12:18 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:12:18 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:16:14 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-02 01:16:21 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-02 01:16:30 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-02 01:16:32 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-02 01:16:32 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-02 01:16:38 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-02 01:16:40 INFO  BankLoginPrompt:37 - you successfully logged in
+2019-11-02 01:16:40 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:16:40 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:16:49 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 01:16:49 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 01:16:51 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 01:16:51 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 01:16:51 DEBUG DepositPrompt:32 - attempting to deposit into your account
+2019-11-02 01:16:51 DEBUG BankAccountDaoSQL:145 - attempting to find all bank accounts from DB
+2019-11-02 01:17:04 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:17:04 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:17:46 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-02 01:18:05 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-02 01:18:07 INFO  BankLoginPrompt:37 - you successfully logged in
+2019-11-02 01:18:07 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:18:07 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:18:07 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 01:18:07 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 01:18:07 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:18:07 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:18:13 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 01:18:13 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositOrWithdraw
+2019-11-02 01:18:15 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 01:18:15 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.DepositPrompt
+2019-11-02 01:18:15 DEBUG DepositPrompt:32 - attempting to deposit into your account
+2019-11-02 01:18:15 DEBUG BankAccountDaoSQL:145 - attempting to find all bank accounts from DB
+2019-11-02 01:18:22 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-02 01:18:22 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt

@@ -40,14 +40,15 @@ public class TransactionsDaoSQL implements TransactionsDao {
 		// bankLog.debug("attempting to find accounts from DB");
 				try (Connection c = BankConnectionUtility.getConnection()) {
 
-					String sql = "INSERT INTO transactions (transaction_id, bank_account_id, user_id, amount, action, role) "
-							+ " VALUES (transactions_id_seq.nextval , ?,?,?,?)";
+					String sql = "INSERT INTO transactions (transaction_id, bank_account_id, user_id, amount, action, timestamp) "
+							+ " VALUES (transactions_id_seq.nextval , ?,?,?,?,CURRENT_TIMESTAMP)";
 
 					PreparedStatement ps = c.prepareStatement(sql);
 					ps.setInt(1, transaction.getBankAccountId());
 					ps.setInt(2, transaction.getUserId());
 					ps.setDouble(3, transaction.getAmount());
 					ps.setString(4,  transaction.getAction());
+					
 			
 					return ps.executeUpdate();
 

@@ -4,15 +4,17 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
 import com.revature.bankdaos.BankAccountDao;
-
+import com.revature.bankdaos.TransactionsDao;
 import com.revature.bankmodels.BankAccount;
 import com.revature.bankmodels.BankUser;
+import com.revature.bankmodels.Transactions;
 import com.revature.bankutil.BankAuthUtil;
 import com.revature.bankutil.BankConnectionUtility;
 
@@ -22,8 +24,7 @@ public class DepositPrompt implements BankPrompt {
 	private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
 	private Scanner scan = new Scanner(System.in);
-	
-	
+	private TransactionsDao transactionDao = TransactionsDao.currentImplementation;
 
 	@Override
 	public BankPrompt run() {
@@ -53,16 +54,16 @@ public class DepositPrompt implements BankPrompt {
 			ps.setInt(1, accounts.get(accountSelection).getBankAccountId());
 			ps.setInt(2, user.getUserId());
 			System.out.println(depositAmount);
-System.out.println(accounts.get(accountSelection).getBankAccountId());
-System.out.println(user.getUserId());
+			System.out.println(accounts.get(accountSelection).getBankAccountId());
+			System.out.println(user.getUserId());
 			ResultSet rs = ps.executeQuery();
 			double balance = 0;
-			if(rs.next()) {
-			 balance = rs.getDouble("balance");
-			 
+			if (rs.next()) {
+				balance = rs.getDouble("balance");
+
 			}
 			balance += depositAmount;
-System.out.println(balance);
+			System.out.println(balance);
 			if (depositAmount <= 0) {
 				System.out.println("You cannot deposit a negative value. Good day sir/ma'am.");
 				return new AdminMainMenuPrompt();
@@ -75,6 +76,9 @@ System.out.println(balance);
 			ps2.setInt(2, accounts.get(accountSelection).getBankAccountId());
 			ps2.setInt(3, user.getUserId());
 
+			Transactions trans = new Transactions(0, accounts.get(accountSelection).getBankAccountId(),
+					user.getUserId(), "Deposited", depositAmount, null);
+			transactionDao.save(trans);
 			System.out.print("You have sucessfully made a deposit!");
 
 			ps2.executeUpdate();
