@@ -18,7 +18,7 @@ import com.revature.bankutil.BankConnectionUtility;
 
 public class ViewBankAccountPrompt implements BankPrompt {
 
-	private Logger log = Logger.getRootLogger();
+	//private Logger log = Logger.getRootLogger();
 	private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
 	private BankUserDao bankUserDao = BankUserDao.currentImplementation;
@@ -27,7 +27,7 @@ public class ViewBankAccountPrompt implements BankPrompt {
 
 	@Override
 	public BankPrompt run() {
-		log.debug("attempting to view all of your accounts");
+		//log.debug("attempting to view all of your accounts");
 		BankUser user = bankAuthUtil.getCurrentUser();
 		// if(bankAuthUtil.getCurrentUser().getRole().contentEquals("Customer")) {
 		List<BankAccount> accounts = bankAccountDao.findAll(user.getUserId(), user.getRole());

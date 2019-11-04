@@ -6,7 +6,7 @@ import com.revature.bankprompts.BankLoginPrompt;
 import org.apache.log4j.Logger;
 
 public class BankDriver {
-	private static Logger log = Logger.getRootLogger();
+	//private static Logger log = Logger.getRootLogger();
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -14,9 +14,9 @@ public class BankDriver {
 		
 		BankPrompt p = new BankLoginPrompt();
 		while (true) { 
-			log.debug("starting prompt of type: " + p.getClass());
+			//log.debug("starting prompt of type: " + p.getClass());
 			p = p.run();
-			log.debug("next prompt is of type: " + p.getClass());
+			//log.debug("next prompt is of type: " + p.getClass());
 		}
 
 	}

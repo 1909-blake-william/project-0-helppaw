@@ -22,7 +22,7 @@ public class CreateBankAccountPrompt implements BankPrompt {
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
 	private Scanner scan = new Scanner(System.in);
 	// private BankAccount bA = BankAccount.currentImplementation;
-	Logger bankLog = Logger.getRootLogger();
+	//Logger bankLog = Logger.getRootLogger();
 	private TransactionsDao transactions = TransactionsDao.currentImplementation;
 
 	@Override
@@ -48,7 +48,7 @@ public class CreateBankAccountPrompt implements BankPrompt {
 				return new CreateOrCloseBankAccountPrompt();
 			case "4":
 				System.out.println("You have successfully logged out. Have a nice day!!");
-				bankLog.debug("successfully logged out.");
+				//bankLog.debug("successfully logged out.");
 				return new BankLoginPrompt();
 
 			default:

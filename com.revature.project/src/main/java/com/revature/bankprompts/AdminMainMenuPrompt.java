@@ -10,7 +10,7 @@ public class AdminMainMenuPrompt implements BankPrompt {
 
 	private Scanner scan = new Scanner(System.in);
 	private BankAuthUtil bU = BankAuthUtil.instance;
-	Logger bankLog = Logger.getRootLogger();
+	//Logger bankLog = Logger.getRootLogger();
 
 	@Override
 	public BankPrompt run() {
@@ -40,7 +40,7 @@ public class AdminMainMenuPrompt implements BankPrompt {
 		case "5":
 
 			System.out.println("You have successfully logged out. Have a nice day!!");
-			bankLog.debug("successfully logged out.");
+			//bankLog.debug("successfully logged out.");
 			return new BankLoginPrompt();
 
 		default:

@@ -20,7 +20,7 @@ import com.revature.bankutil.BankConnectionUtility;
 
 public class DepositPrompt implements BankPrompt {
 
-	private Logger log = Logger.getRootLogger();
+	//private Logger log = Logger.getRootLogger();
 	private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
 	private Scanner scan = new Scanner(System.in);
@@ -28,7 +28,7 @@ public class DepositPrompt implements BankPrompt {
 
 	@Override
 	public BankPrompt run() {
-		log.debug("attempting to deposit into your account");
+		// log.debug("attempting to deposit into your account");
 		BankUser user = bankAuthUtil.getCurrentUser();
 		// if(bankAuthUtil.getCurrentUser().getRole().contentEquals("Customer")) {
 		List<BankAccount> accounts = bankAccountDao.findCurrentUser(user.getUserId());
@@ -66,7 +66,14 @@ public class DepositPrompt implements BankPrompt {
 			System.out.println(balance);
 			if (depositAmount <= 0) {
 				System.out.println("You cannot deposit a negative value. Good day sir/ma'am.");
-				return new AdminMainMenuPrompt();
+				if (bankAuthUtil.getCurrentUser().getRole().contentEquals("Customer")) {
+					return new CustomerMainMenuPrompt();
+				} else {
+
+					return new AdminMainMenuPrompt();
+
+				}
+
 			}
 
 			String sql2 = "UPDATE bankaccounts SET balance = ? WHERE BANKACCOUNT_ID = ? AND USER_ID = ?";
@@ -90,8 +97,13 @@ public class DepositPrompt implements BankPrompt {
 			e.printStackTrace();
 		}
 		// System.out.println("Sorry, something went wrong.");
-		return new AdminMainMenuPrompt();
+		if (bankAuthUtil.getCurrentUser().getRole().contentEquals("Customer")) {
+			return new CustomerMainMenuPrompt();
+		} else {
+
+			return new AdminMainMenuPrompt();
+
+		}
 
 	}
-
 }

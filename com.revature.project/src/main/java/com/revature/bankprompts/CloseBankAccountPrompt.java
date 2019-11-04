@@ -40,17 +40,35 @@ public class CloseBankAccountPrompt implements BankPrompt {
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, accounts.get(accountSelection).getBankAccountId());
 			ps.setInt(2, user.getUserId());
-			System.out.print("You just closed your account");
+			System.out.print("You just closed your account. ");
 
 			ps.executeUpdate();
 			
+			if (bU.getCurrentUser().getRole().contentEquals("Customer")) {
+				return new CustomerMainMenuPrompt();
+			} else {
+				
+				
+			
 			return new AdminMainMenuPrompt();
+
+		}
+
+	
 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		System.out.println("Sorry, something went wrong.");
+		if (bU.getCurrentUser().getRole().contentEquals("Customer")) {
+			return new CustomerMainMenuPrompt();
+		} else {
+			
+			
+		
 		return new AdminMainMenuPrompt();
+
+	}
 
 	}
 }

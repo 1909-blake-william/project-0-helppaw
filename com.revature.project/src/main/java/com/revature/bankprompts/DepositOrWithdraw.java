@@ -8,7 +8,7 @@ public class DepositOrWithdraw implements BankPrompt {
 
 private Scanner scan = new Scanner(System.in);
 	
-	Logger bankLog = Logger.getRootLogger();
+	//Logger bankLog = Logger.getRootLogger();
 
 	@Override
 	public BankPrompt run() {
@@ -29,7 +29,7 @@ private Scanner scan = new Scanner(System.in);
 				
 		case "4":
 		System.out.println("You have successfully logged out. Have a nice day!!");
-		bankLog.debug("successfully logged out.");
+		//bankLog.debug("successfully logged out.");
 			return new BankLoginPrompt();
 		default:
 			System.out.println("invalid selection, try again.");

@@ -14,7 +14,7 @@ import com.revature.bankutil.BankConnectionUtility;
 
 public class BankUserDaoSQL implements BankUserDao {
 
-	private Logger bankLog = Logger.getRootLogger();
+	//private Logger bankLog = Logger.getRootLogger();
 
 	BankUser extractBankUser(ResultSet rs) throws SQLException {
 		int id = rs.getInt("user_id");
@@ -27,7 +27,7 @@ public class BankUserDaoSQL implements BankUserDao {
 
 	@Override
 	public int save(BankUser bU) {
-		bankLog.debug("attempting to find user by credentials from DB");
+		//bankLog.debug("attempting to find user by credentials from DB");
 		try (Connection c = BankConnectionUtility.getConnection()) {
 
 			String sql = "INSERT INTO bank_users (user_id, username, password, FullName) "
@@ -48,7 +48,7 @@ public class BankUserDaoSQL implements BankUserDao {
 
 	@Override
 	public List<BankUser> findAll(int userId, String role) {
-		bankLog.debug("attempting to find all users from DB");
+		//bankLog.debug("attempting to find all users from DB");
 		try (Connection c = BankConnectionUtility.getConnection()) {
 
 			String sql = "SELECT * FROM bank_users";
@@ -107,7 +107,7 @@ public class BankUserDaoSQL implements BankUserDao {
 
 	@Override
 	public BankUser findByUsernameAndPassword(String username, String password) {
-		bankLog.debug("attempting to find user by credentials from DB");
+		//bankLog.debug("attempting to find user by credentials from DB");
 		try (Connection c = BankConnectionUtility.getConnection()) {
 
 			String sql = "SELECT * FROM bank_users " + "WHERE username = ? AND password = ?";

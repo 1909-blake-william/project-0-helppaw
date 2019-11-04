@@ -20,7 +20,7 @@ import com.revature.bankutil.BankConnectionUtility;
 
 public class WithdrawPrompt implements BankPrompt {
 
-	private Logger log = Logger.getRootLogger();
+	//private Logger log = Logger.getRootLogger();
 	private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
 	private Scanner scan = new Scanner(System.in);
@@ -28,7 +28,7 @@ public class WithdrawPrompt implements BankPrompt {
 
 	@Override
 	public BankPrompt run() {
-		log.debug("attempting to deposit into your account");
+		//log.debug("attempting to withdraw from your account");
 		BankUser user = bankAuthUtil.getCurrentUser();
 		// if(bankAuthUtil.getCurrentUser().getRole().contentEquals("Customer")) {
 		List<BankAccount> accounts = bankAccountDao.findCurrentUser(user.getUserId());
@@ -54,8 +54,8 @@ public class WithdrawPrompt implements BankPrompt {
 			ps.setInt(1, accounts.get(accountSelection).getBankAccountId());
 			ps.setInt(2, user.getUserId());
 			System.out.println(withdrawAmount);
-			System.out.println(accounts.get(accountSelection).getBankAccountId());
-			System.out.println(user.getUserId());
+			//System.out.println(accounts.get(accountSelection).getBankAccountId());
+			//System.out.println(user.getUserId());
 			ResultSet rs = ps.executeQuery();
 			double balance = 0;
 			if (rs.next()) {
@@ -94,8 +94,13 @@ public class WithdrawPrompt implements BankPrompt {
 			e.printStackTrace();
 		}
 		// System.out.println("Sorry, something went wrong.");
-		return new AdminMainMenuPrompt();
+		if (bankAuthUtil.getCurrentUser().getRole().contentEquals("Customer")) {
+			return new CustomerMainMenuPrompt();
+		} else {
+
+			return new AdminMainMenuPrompt();
+
+		}
 
 	}
-
 }

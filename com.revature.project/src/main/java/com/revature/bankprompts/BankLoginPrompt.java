@@ -9,7 +9,7 @@ import com.revature.bankmodels.BankUser;
 import com.revature.bankutil.BankAuthUtil;
 
 public class BankLoginPrompt implements BankPrompt {
-	private Logger bankLog = Logger.getRootLogger();
+	//private Logger bankLog = Logger.getRootLogger();
 	private Scanner scan = new Scanner(System.in);
 	private BankUserDao bankUserDao = BankUserDao.currentImplementation;
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
@@ -54,7 +54,7 @@ public class BankLoginPrompt implements BankPrompt {
 
 			bankUserDao.save(newBankUser);
 			System.out.println("You have successfully registered!!");
-			bankLog.info("You have successfully registered!");
+			//bankLog.info("You have successfully registered!");
 			break;
 		}
 

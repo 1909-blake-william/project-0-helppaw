@@ -16,7 +16,7 @@ public class BankAccountDaoSQL implements BankAccountDao {
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
 	
 
-	private Logger bankLog = Logger.getRootLogger();
+	//private Logger bankLog = Logger.getRootLogger();
 
 	BankAccount extractBankAccount(ResultSet rs) throws SQLException {
 		int rsBankAccountId = rs.getInt("bankaccount_id");
@@ -52,7 +52,7 @@ public class BankAccountDaoSQL implements BankAccountDao {
 	@Override
 	public List<BankAccount> findAll(int userId, String role) {
 		if ("Admin".equals(role)) {
-			bankLog.debug("attempting to find all bank accounts from DB");
+			//bankLog.debug("attempting to find all bank accounts from DB");
 			try (Connection c = BankConnectionUtility.getConnection()) {
 
 				String sql = "SELECT * FROM bankaccounts";
@@ -70,7 +70,7 @@ public class BankAccountDaoSQL implements BankAccountDao {
 				e.printStackTrace();
 			}
 		} else { //make a selection
-			bankLog.debug("attempting to find all of your bank accounts");
+			//bankLog.debug("attempting to find all of your bank accounts");
 			try (Connection c = BankConnectionUtility.getConnection()) {
 
 				String sql = "SELECT * FROM bankaccounts WHERE user_id = ?";
@@ -102,7 +102,7 @@ public class BankAccountDaoSQL implements BankAccountDao {
 		
 	@Override
 	public BankAccount findByBankAccountId(int bankAccountId) {
-		bankLog.debug("attempting to find bank account by credentials from DB");
+		//bankLog.debug("attempting to find bank account by credentials from DB");
 		try (Connection c = BankConnectionUtility.getConnection()) {
 
 			String sql = "SELECT * FROM bankaccounts " + "WHERE bankaccount_id = ?";
@@ -143,7 +143,7 @@ public class BankAccountDaoSQL implements BankAccountDao {
 	public List<BankAccount> findCurrentUser(int userId) {
 		
 		//if ("Admin".equals(role)) {
-		bankLog.debug("attempting to find all bank accounts from DB");
+		//bankLog.debug("attempting to find all bank accounts from DB");
 		try (Connection c = BankConnectionUtility.getConnection()) {
 
 			String sql = "SELECT * FROM bankaccounts WHERE user_id = ?";
@@ -163,7 +163,7 @@ public class BankAccountDaoSQL implements BankAccountDao {
 			e.printStackTrace();
 		}
 	//} else { //make a selection
-		bankLog.debug("attempting to find all of your bank accounts");
+		//bankLog.debug("attempting to find all of your bank accounts");
 		try (Connection c = BankConnectionUtility.getConnection()) {
 
 			String sql = "SELECT * FROM bankaccounts WHERE user_id = ?";

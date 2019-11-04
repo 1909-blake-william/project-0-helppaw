@@ -19,7 +19,7 @@ public class TransactionsDaoSQL implements TransactionsDao {
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
 	private BankUserDaoSQL bSQL = (BankUserDaoSQL) BankUserDaoSQL.currentImplementation;
 
-	private Logger bankLog = Logger.getRootLogger();
+	//private Logger bankLog = Logger.getRootLogger();
 
 	private Transactions extractTransactions(ResultSet rs) throws SQLException {
 		int rsTransactionId = rs.getInt("transactions_id");
@@ -59,7 +59,7 @@ public class TransactionsDaoSQL implements TransactionsDao {
 	@Override
 	public List<Transactions> findAll(int userId, String role) {
 		if ("Admin".equals(role)) {
-			bankLog.debug("attempting to find all transactions from DB");
+			//bankLog.debug("attempting to find all transactions from DB");
 			try (Connection c = BankConnectionUtility.getConnection()) {
 
 				String sql = "SELECT * FROM transactions";
@@ -77,7 +77,7 @@ public class TransactionsDaoSQL implements TransactionsDao {
 				e.printStackTrace();
 			}
 		} else { // make a selection
-			bankLog.debug("attempting to find all transaction from your bank accounts");
+			//bankLog.debug("attempting to find all transaction from your bank accounts");
 			try (Connection c = BankConnectionUtility.getConnection()) {
 
 				String sql = "SELECT * FROM transactions WHERE user_id = ?";

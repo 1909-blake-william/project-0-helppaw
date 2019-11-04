@@ -40,7 +40,7 @@ public class CreateOrCloseBankAccountPrompt implements BankPrompt {
 
 		case "4":
 			System.out.println("You have successfully logged out. Have a nice day!!");
-			bankLog.debug("successfully logged out.");
+			//bankLog.debug("successfully logged out.");
 			return new BankLoginPrompt();
 		default:
 			System.out.println("invalid selection, try again.");

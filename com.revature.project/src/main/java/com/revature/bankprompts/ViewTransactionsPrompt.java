@@ -21,7 +21,7 @@ import com.revature.bankutil.BankConnectionUtility;
 
 public class ViewTransactionsPrompt implements BankPrompt {
 
-	private Logger log = Logger.getRootLogger();
+	//private Logger log = Logger.getRootLogger();
 	private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
 	private BankUserDao bankUserDao = BankUserDao.currentImplementation;

@@ -9,7 +9,7 @@ import com.revature.bankutil.BankAuthUtil;
 public class CustomerMainMenuPrompt implements BankPrompt {
 	private Scanner scan = new Scanner(System.in);
 	private BankAuthUtil bU = BankAuthUtil.instance;
-	Logger bankLog = Logger.getRootLogger();
+	//Logger bankLog = Logger.getRootLogger();
 
 	@Override
 	public BankPrompt run() {
@@ -35,7 +35,7 @@ public class CustomerMainMenuPrompt implements BankPrompt {
 			
 					
 			System.out.println("You have successfully logged out. Have a nice day!!");
-			bankLog.debug("successfully logged out.");
+			//bankLog.debug("successfully logged out.");
 			return new BankLoginPrompt();
 		default:
 			System.out.println("invalid selection, try again.");
