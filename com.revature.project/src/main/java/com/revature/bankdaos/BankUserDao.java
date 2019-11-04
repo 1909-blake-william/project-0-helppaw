@@ -12,7 +12,7 @@ public interface BankUserDao {
 	
 	int save(BankUser c);
 	
-	List<BankUser> findAll();
+	List<BankUser> findAll(int i, String string);
 	
 	
 	BankUser findByUsernameAndPassword(String username, String password);
@@ -22,5 +22,6 @@ public interface BankUserDao {
 	BankUser findByFullname(String fullname);
 
 	BankUser findById(int userId);
+
 
 }

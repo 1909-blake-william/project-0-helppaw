@@ -24,7 +24,7 @@ public class CustomerMainMenuPrompt implements BankPrompt {
 		switch (selection) {
 		case "1":
 			
-			return new ViewBankAccountPrompt();
+			return new ViewBankAccountsOrTransactions();
 		case "2":
 			
 			return new CreateOrCloseBankAccountPrompt();

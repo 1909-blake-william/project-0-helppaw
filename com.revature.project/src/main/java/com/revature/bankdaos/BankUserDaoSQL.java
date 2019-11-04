@@ -47,7 +47,7 @@ public class BankUserDaoSQL implements BankUserDao {
 	}
 
 	@Override
-	public List<BankUser> findAll() {
+	public List<BankUser> findAll(int userId, String role) {
 		bankLog.debug("attempting to find all users from DB");
 		try (Connection c = BankConnectionUtility.getConnection()) {
 
@@ -137,4 +137,7 @@ public class BankUserDaoSQL implements BankUserDao {
 		return null;
 	}
 
-}
+	
+	}
+
+

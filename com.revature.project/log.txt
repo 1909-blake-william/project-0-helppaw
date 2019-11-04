@@ -890,3 +890,108 @@
 2019-11-04 01:16:52 DEBUG BankAccountDaoSQL:73 - attempting to find all of your bank accounts
 2019-11-04 01:16:54 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
 2019-11-04 01:16:54 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 09:54:39 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-04 09:54:47 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-04 09:54:48 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 09:54:48 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 09:54:51 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewUsersPrompt
+2019-11-04 09:54:51 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewUsersPrompt
+2019-11-04 09:54:51 DEBUG ViewUsersPrompt:31 - attempting to view all of your accounts
+2019-11-04 10:25:36 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-04 10:25:42 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-04 10:25:43 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 10:25:43 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 10:25:45 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewUsersPrompt
+2019-11-04 10:25:45 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewUsersPrompt
+2019-11-04 10:25:45 DEBUG ViewUsersPrompt:31 - attempting to view all of your accounts
+2019-11-04 10:25:45 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 10:25:45 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 10:25:49 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewUsersPrompt
+2019-11-04 10:25:49 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewUsersPrompt
+2019-11-04 10:25:49 DEBUG ViewUsersPrompt:31 - attempting to view all of your accounts
+2019-11-04 10:25:49 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 10:25:49 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 10:31:38 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-04 10:31:43 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-04 10:31:44 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 10:31:44 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 10:31:47 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewUsersPrompt
+2019-11-04 10:31:47 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewUsersPrompt
+2019-11-04 10:31:47 DEBUG ViewUsersPrompt:31 - attempting to view all of your accounts
+2019-11-04 10:31:47 DEBUG BankUserDaoSQL:51 - attempting to find all users from DB
+2019-11-04 10:31:49 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 10:31:49 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 10:32:09 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewUsersPrompt
+2019-11-04 10:32:09 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewUsersPrompt
+2019-11-04 10:32:09 DEBUG ViewUsersPrompt:31 - attempting to view all of your accounts
+2019-11-04 10:32:09 DEBUG BankUserDaoSQL:51 - attempting to find all users from DB
+2019-11-04 10:32:11 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 10:32:11 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 13:29:01 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-04 13:29:13 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-04 13:29:14 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.CustomerMainMenuPrompt
+2019-11-04 13:29:14 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.CustomerMainMenuPrompt
+2019-11-04 13:29:16 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:29:16 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:29:18 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountPrompt
+2019-11-04 13:29:18 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountPrompt
+2019-11-04 13:29:18 DEBUG ViewBankAccountPrompt:30 - attempting to view all of your accounts
+2019-11-04 13:29:18 DEBUG BankAccountDaoSQL:73 - attempting to find all of your bank accounts
+2019-11-04 13:29:20 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 13:29:20 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 13:29:25 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:29:25 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:29:28 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewTransactionsPrompt
+2019-11-04 13:29:28 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewTransactionsPrompt
+2019-11-04 13:29:28 DEBUG TransactionsDaoSQL:80 - attempting to find all transaction from your bank accounts
+2019-11-04 13:33:02 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-04 13:33:11 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-04 13:33:12 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.CustomerMainMenuPrompt
+2019-11-04 13:33:12 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.CustomerMainMenuPrompt
+2019-11-04 13:33:14 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:33:14 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:33:16 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountPrompt
+2019-11-04 13:33:16 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountPrompt
+2019-11-04 13:33:16 DEBUG ViewBankAccountPrompt:30 - attempting to view all of your accounts
+2019-11-04 13:33:16 DEBUG BankAccountDaoSQL:73 - attempting to find all of your bank accounts
+2019-11-04 13:33:18 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 13:33:18 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 13:33:20 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:33:20 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:33:24 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewTransactionsPrompt
+2019-11-04 13:33:24 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewTransactionsPrompt
+2019-11-04 13:33:24 DEBUG TransactionsDaoSQL:80 - attempting to find all transaction from your bank accounts
+2019-11-04 13:34:09 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-04 13:34:14 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-04 13:34:15 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.CustomerMainMenuPrompt
+2019-11-04 13:34:15 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.CustomerMainMenuPrompt
+2019-11-04 13:34:17 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:34:17 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:34:19 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountPrompt
+2019-11-04 13:34:19 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountPrompt
+2019-11-04 13:34:19 DEBUG ViewBankAccountPrompt:30 - attempting to view all of your accounts
+2019-11-04 13:34:19 DEBUG BankAccountDaoSQL:73 - attempting to find all of your bank accounts
+2019-11-04 13:34:20 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 13:34:20 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 13:34:22 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:34:22 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:34:24 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewTransactionsPrompt
+2019-11-04 13:34:24 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewTransactionsPrompt
+2019-11-04 13:34:24 DEBUG TransactionsDaoSQL:80 - attempting to find all transaction from your bank accounts
+2019-11-04 13:37:15 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.BankLoginPrompt
+2019-11-04 13:37:19 DEBUG BankUserDaoSQL:110 - attempting to find user by credentials from DB
+2019-11-04 13:37:21 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.CustomerMainMenuPrompt
+2019-11-04 13:37:21 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.CustomerMainMenuPrompt
+2019-11-04 13:37:23 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:37:23 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:37:25 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountPrompt
+2019-11-04 13:37:25 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountPrompt
+2019-11-04 13:37:25 DEBUG ViewBankAccountPrompt:30 - attempting to view all of your accounts
+2019-11-04 13:37:25 DEBUG BankAccountDaoSQL:73 - attempting to find all of your bank accounts
+2019-11-04 13:37:27 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 13:37:27 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.AdminMainMenuPrompt
+2019-11-04 13:38:51 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:38:51 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewBankAccountsOrTransactions
+2019-11-04 13:38:53 DEBUG BankDriver:19 - next prompt is of type: class com.revature.bankprompts.ViewTransactionsPrompt
+2019-11-04 13:38:53 DEBUG BankDriver:17 - starting prompt of type: class com.revature.bankprompts.ViewTransactionsPrompt
+2019-11-04 13:38:53 DEBUG TransactionsDaoSQL:80 - attempting to find all transaction from your bank accounts

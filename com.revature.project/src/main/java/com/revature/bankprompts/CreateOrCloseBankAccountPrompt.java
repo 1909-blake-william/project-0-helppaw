@@ -11,7 +11,8 @@ import com.revature.bankutil.BankAuthUtil;
 public class CreateOrCloseBankAccountPrompt implements BankPrompt {
 
 	private Scanner scan = new Scanner(System.in);
-	
+	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
+
 	Logger bankLog = Logger.getRootLogger();
 
 	@Override
@@ -22,26 +23,31 @@ public class CreateOrCloseBankAccountPrompt implements BankPrompt {
 		System.out.println("Enter 4 to logout");
 		String choice = scan.nextLine();
 		switch (choice) {
-		case "1": 
-			
+		case "1":
+
 			return new CreateBankAccountPrompt();
 		case "2":
 			return new CloseBankAccountPrompt();
-			
+
 		case "3":
-			return new AdminMainMenuPrompt();
-				
+			if (bankAuthUtil.getCurrentUser().getRole().contentEquals("Customer")) {
+				return new CustomerMainMenuPrompt();
+			} else {
+
+				return new AdminMainMenuPrompt();
+
+			}
+
 		case "4":
-		System.out.println("You have successfully logged out. Have a nice day!!");
-		bankLog.debug("successfully logged out.");
+			System.out.println("You have successfully logged out. Have a nice day!!");
+			bankLog.debug("successfully logged out.");
 			return new BankLoginPrompt();
 		default:
 			System.out.println("invalid selection, try again.");
 			break;
-		
-		
-		}		
+
+		}
 		return this;
-	
+
 	}
 }
