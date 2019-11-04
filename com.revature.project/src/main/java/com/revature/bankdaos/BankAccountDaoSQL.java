@@ -51,7 +51,7 @@ public class BankAccountDaoSQL implements BankAccountDao {
 
 	@Override
 	public List<BankAccount> findAll(int userId, String role) {
-		//if ("Admin".equals(role)) {
+		if ("Admin".equals(role)) {
 			bankLog.debug("attempting to find all bank accounts from DB");
 			try (Connection c = BankConnectionUtility.getConnection()) {
 
@@ -69,11 +69,11 @@ public class BankAccountDaoSQL implements BankAccountDao {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		//} else { //make a selection
+		} else { //make a selection
 			bankLog.debug("attempting to find all of your bank accounts");
 			try (Connection c = BankConnectionUtility.getConnection()) {
 
-				String sql = "SELECT * FROM bankaccounts WHERE user_id = '?'";
+				String sql = "SELECT * FROM bankaccounts WHERE user_id = ?";
 
 			/*	String sql = "SELECT * FROM bankaccounts a\r\n" + 
 						"INNER JOIN bank_users u\r\n" + 
@@ -97,7 +97,8 @@ public class BankAccountDaoSQL implements BankAccountDao {
 		return null;
 	
 	}
-//}
+		return null;
+}
 		
 	@Override
 	public BankAccount findByBankAccountId(int bankAccountId) {

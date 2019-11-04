@@ -13,7 +13,7 @@ public class CustomerMainMenuPrompt implements BankPrompt {
 
 	@Override
 	public BankPrompt run() {
-		System.out.println("Welcome " + bU.getCurrentUser() + ", please choose an option");
+		System.out.println("Welcome " + bU.getCurrentUser().getFullname() + "!! " + ", please choose an option");
 		System.out.println("Enter 1 to view bank account(s) and transactions");
 		System.out.println("Enter 2 to create/remove bank account(s)");
 		System.out.println("Enter 3 to deposit/withdraw to/from bank account(s)");

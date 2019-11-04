@@ -20,7 +20,7 @@ public class BankAuthUtil {
 	public BankUser login(String username, String password) {
 		BankUser bU = bankUserDao.findByUsernameAndPassword(username, password);
 		currentBankUser = bU;
-		System.out.println("THIS IS THE USER ID ON LOGIN" + bU.getUserId());
+		//System.out.println("THIS IS THE USER ID ON LOGIN" + bU.getUserId());
 		return bU;
 	}
 

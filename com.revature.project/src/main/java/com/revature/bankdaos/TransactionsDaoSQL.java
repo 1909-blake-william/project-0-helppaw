@@ -18,11 +18,10 @@ import com.revature.bankutil.BankConnectionUtility;
 public class TransactionsDaoSQL implements TransactionsDao {
 	private BankAuthUtil bankAuthUtil = BankAuthUtil.instance;
 	private BankUserDaoSQL bSQL = (BankUserDaoSQL) BankUserDaoSQL.currentImplementation;
-	
-	private Logger bankLog = Logger.getRootLogger();
-	
 
-	Transactions extractTransactions(ResultSet rs) throws SQLException {
+	private Logger bankLog = Logger.getRootLogger();
+
+	private Transactions extractTransactions(ResultSet rs) throws SQLException {
 		int rsTransactionId = rs.getInt("transaction_id");
 		int rsBankAccountId = rs.getInt("bank_account_id");
 		int rsUserId = rs.getInt("user_id");
@@ -30,39 +29,36 @@ public class TransactionsDaoSQL implements TransactionsDao {
 		String rsAction = rs.getString("action");
 		Timestamp rsTimestamp = rs.getTimestamp("timestamp");
 		return new Transactions(rsTransactionId, rsBankAccountId, rsUserId, rsAction, rsAmount, rsTimestamp);
-		
+
 	}
-	
-	
 
 	@Override
 	public int save(Transactions transaction) {
 		// bankLog.debug("attempting to find accounts from DB");
-				try (Connection c = BankConnectionUtility.getConnection()) {
+		try (Connection c = BankConnectionUtility.getConnection()) {
 
-					String sql = "INSERT INTO transactions (transaction_id, bank_account_id, user_id, amount, action, timestamp) "
-							+ " VALUES (transactions_id_seq.nextval , ?,?,?,?,CURRENT_TIMESTAMP)";
+			String sql = "INSERT INTO transactions (transactions_id, bank_account_id, user_id, amount, action, timestamp) "
+					+ " VALUES (transactions_id_seq.nextval , ?,?,?,?,CURRENT_TIMESTAMP)";
 
-					PreparedStatement ps = c.prepareStatement(sql);
-					ps.setInt(1, transaction.getBankAccountId());
-					ps.setInt(2, transaction.getUserId());
-					ps.setDouble(3, transaction.getAmount());
-					ps.setString(4,  transaction.getAction());
-					
-			
-					return ps.executeUpdate();
+			PreparedStatement ps = c.prepareStatement(sql);
+			ps.setInt(1, transaction.getBankAccountId());
+			ps.setInt(2, transaction.getUserId());
+			ps.setDouble(3, transaction.getAmount());
+			ps.setString(4, transaction.getAction());
 
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+			return ps.executeUpdate();
 
-				return 0;
-			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return 0;
+	}
 
 	@Override
 	public List<Transactions> findAll(int transactionId, String role) {
-		if ("Admin".equals(role )) {
+		if ("Admin".equals(role)) {
 			bankLog.debug("attempting to find all transactions from DB");
 			try (Connection c = BankConnectionUtility.getConnection()) {
 
@@ -80,17 +76,17 @@ public class TransactionsDaoSQL implements TransactionsDao {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		} else { //make a selection
+		} else { // make a selection
 			bankLog.debug("attempting to find all transaction from your bank accounts");
 			try (Connection c = BankConnectionUtility.getConnection()) {
 
 				String sql = "SELECT * FROM bankaccounts WHERE user_id = '?'";
 
 				PreparedStatement ps = c.prepareStatement(sql);
-				ps.setInt(transactionId, transactionId);
+				ps.setInt(1, bankAuthUtil.getCurrentUser().getUserId()); //might break the code
 
 				ResultSet rs = ps.executeQuery();
-				
+
 				List<Transactions> transactions = new ArrayList<Transactions>();
 				while (rs.next()) {
 					transactions.add(extractTransactions(rs));
@@ -99,10 +95,11 @@ public class TransactionsDaoSQL implements TransactionsDao {
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}	
+			}
 		}
 		return null;
 	}
+
 	@Override
 	public Transactions findById(int transactionId) {
 		// TODO Auto-generated method stub

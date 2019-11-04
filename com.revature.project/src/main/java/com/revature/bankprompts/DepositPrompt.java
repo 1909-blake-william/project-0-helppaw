@@ -42,7 +42,7 @@ public class DepositPrompt implements BankPrompt {
 		int accountSelection = scan.nextInt();
 		scan.nextLine();
 
-		System.out.println("How much to want to deposit? (Enter in format: 00.00");
+		System.out.println("How much do you want to deposit? (Enter in format: 00.00");
 
 		double depositAmount = scan.nextDouble();
 
@@ -75,11 +75,14 @@ public class DepositPrompt implements BankPrompt {
 			ps2.setDouble(1, balance);
 			ps2.setInt(2, accounts.get(accountSelection).getBankAccountId());
 			ps2.setInt(3, user.getUserId());
+			Timestamp ts = new Timestamp(System.currentTimeMillis());
 
 			Transactions trans = new Transactions(0, accounts.get(accountSelection).getBankAccountId(),
-					user.getUserId(), "Deposited", depositAmount, null);
+					user.getUserId(), "Deposited", depositAmount, ts);
 			transactionDao.save(trans);
-			System.out.print("You have sucessfully made a deposit!");
+
+			System.out.print("You have sucessfully made a deposit of " + depositAmount + "! " + "Your new balance is "
+					+ balance + "! ");
 
 			ps2.executeUpdate();
 
